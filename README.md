@@ -21,7 +21,9 @@ const store = {}; //object to store needed data
 **Upload a front image:**
 
 ```js
-const front_image = js3DLOOK //Reference to File
+const front_image; //Reference to File
+
+js3DLOOK
   .upload(front_image)
   .then(body => {
     //store the name of the file (body.name)
@@ -55,7 +57,9 @@ js3DLOOK
 **Upload a side image:**
 
 ```js
-const side_image = js3DLOOK //Reference to File
+const side_image; //Reference to File
+
+js3DLOOK
   .upload(side_image)
   .then(body => {
     //store the name of the file (body.name)

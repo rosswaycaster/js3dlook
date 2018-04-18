@@ -2,7 +2,7 @@
   "name": "js3dlook",
   "description": "3DLOOK Javascript library",
   "author": "Ross Waycaster <rosswaycaster@me.com> (http://rosswaycaster.com/)",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "dist/js3dlook.cjs.js",
   "module": "dist/js3dlook.esm.js",
   "browser": "dist/js3dlook.umd.js",
