@@ -8,7 +8,7 @@ Install with npm: `npm install --save js3dlook`.
 
 Check the 3DLOOK documentation for the api-flow sequence.
 
-**Create an instance of the library**
+**Create an instance of the library:**
 ```js
 import js3DLOOK from "js3dlook";
 
