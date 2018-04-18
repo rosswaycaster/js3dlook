@@ -13,7 +13,7 @@ Check the 3DLOOK documentation for the api-flow sequence.
 ```js
 import js3DLOOK from "js3dlook";
 
-const js3DLOOK = js3dlook("iechiem9eeChaiyahf1oHie1jae5ahth8eoCiu8i"); //SAMPLE KEY -- replace with your own api key;
+const js3DLOOK = js3dlook("iechiem9eeChaiyahf1oHie1jae5ahth8eoCiu8i"); //SAMPLE KEY -- replace with your own api key
 
 const store = {}; //object to store needed data
 ```
