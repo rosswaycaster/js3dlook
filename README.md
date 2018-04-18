@@ -9,19 +9,19 @@ Install with npm: `npm install --save js3dlook`.
 Check the 3DLOOK documentation for the api-flow sequence.
 
 **Create an instance of the library:**
+
 ```js
 import js3DLOOK from "js3dlook";
 
-const js3DLOOK = js3dlook("iechiem9eeChaiyahf1oHie1jae5ahth8eoCiu8i");
+const js3DLOOK = js3dlook("iechiem9eeChaiyahf1oHie1jae5ahth8eoCiu8i"); //SAMPLE KEY -- replace with your own api key;
 
 const store = {}; //object to store needed data
 ```
 
 **Upload a front image:**
-```js
-const front_image = //Reference to File
 
-js3DLOOK
+```js
+const front_image = js3DLOOK //Reference to File
   .upload(front_image)
   .then(body => {
     //store the name of the file (body.name)
@@ -33,6 +33,7 @@ js3DLOOK
 ```
 
 **Step 1 - Check the downloaded image to the requirements:**
+
 ```js
 js3DLOOK
   .step({
@@ -52,10 +53,9 @@ js3DLOOK
 ```
 
 **Upload a side image:**
-```js
-const side_image = //Reference to File
 
-js3DLOOK
+```js
+const side_image = js3DLOOK //Reference to File
   .upload(side_image)
   .then(body => {
     //store the name of the file (body.name)
@@ -67,6 +67,7 @@ js3DLOOK
 ```
 
 **Step 2 - Check the downloaded image to the requirements:**
+
 ```js
 js3DLOOK
   .step({
@@ -87,6 +88,7 @@ js3DLOOK
 ```
 
 **Complete**
+
 ```js
 js3DLOOK
   .complete({
@@ -106,4 +108,5 @@ js3DLOOK
 ```
 
 ## License
+
 ISC.
