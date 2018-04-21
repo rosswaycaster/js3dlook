@@ -1,4 +1,4 @@
-import request from "request-promise";
+import "whatwg-fetch";
 
 export default function js3dlook(key) {
   function upload(file) {
@@ -7,19 +7,27 @@ export default function js3dlook(key) {
         throw "No file supplied";
       });
     } else {
+      var formData = new FormData();
+      formData.append("image", {
+        uri: file.uri,
+        name: "photo.jpg",
+        type: "image/jpg"
+      });
+
       var options = {
         method: "POST",
-        url: "http://saia.3dlook.me/api/v1/uploads/",
         headers: {
           "cache-control": "no-cache",
           authorization: `APIKey ${key}`,
           "content-type":
             "multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW"
         },
-        formData: { image: file }
+        body: formData
       };
 
-      return request(options).then(body => JSON.parse(body));
+      return fetch("http://saia.3dlook.me/api/v1/uploads/", options).then(
+        body => body.json()
+      );
     }
   }
 
@@ -31,16 +39,17 @@ export default function js3dlook(key) {
     } else {
       var options = {
         method: "POST",
-        url: "http://saia.3dlook.me/api/v1/step/",
         headers: {
           "cache-control": "no-cache",
           authorization: `APIKey ${key}`,
           "content-type": "application/x-www-form-urlencoded"
         },
-        form: params
+        body: JSON.stringify(params)
       };
 
-      return request(options).then(body => JSON.parse(body));
+      return fetch("http://saia.3dlook.me/api/v1/step/", options).then(body =>
+        body.json()
+      );
     }
   }
 
@@ -58,10 +67,10 @@ export default function js3dlook(key) {
           authorization: `APIKey ${key}`,
           "content-type": "application/x-www-form-urlencoded"
         },
-        form: params
+        body: JSON.stringify(params)
       };
 
-      return request(options).then(body => JSON.parse(body));
+      return fetch(options).then(body => body.json());
     }
   }
 

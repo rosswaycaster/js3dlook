@@ -11,7 +11,7 @@ Check the 3DLOOK documentation for the api-flow sequence.
 **Create an instance of the library:**
 
 ```js
-import js3DLOOK from "js3dlook";
+import js3dlook from "js3dlook";
 
 const js3DLOOK = js3dlook("iechiem9eeChaiyahf1oHie1jae5ahth8eoCiu8i"); //SAMPLE KEY -- replace with your own api key
 

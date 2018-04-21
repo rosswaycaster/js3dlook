@@ -2,13 +2,14 @@
   "name": "js3dlook",
   "description": "3DLOOK Javascript library",
   "author": "Ross Waycaster <rosswaycaster@me.com> (http://rosswaycaster.com/)",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "dist/js3dlook.cjs.js",
   "module": "dist/js3dlook.esm.js",
   "browser": "dist/js3dlook.umd.js",
   "dependencies": {
     "request": "^2.85.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.2",
+    "whatwg-fetch": "^2.0.4"
   },
   "devDependencies": {
     "babel-preset-env": "^1.6.0",
@@ -29,7 +30,13 @@
     "type": "git",
     "url": "https://github.com/rosswaycaster/js3dlook.git"
   },
-  "keywords": ["3DLOOK", "3D", "LOOK"],
+  "keywords": [
+    "3DLOOK",
+    "3D",
+    "LOOK"
+  ],
   "license": "ISC",
-  "files": ["dist"]
+  "files": [
+    "dist"
+  ]
 }
