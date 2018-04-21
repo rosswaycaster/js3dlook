@@ -10,8 +10,8 @@ export default [
     dest: pkg.browser,
     format: "umd",
     moduleName: "js3dlook",
-    external: ["request-promise"],
-    globals: { "request-promise": "request-promise" },
+    external: ["whatwg-fetch"],
+    globals: { "whatwg-fetch": "whatwg-fetch", fetch: "fetch" },
     plugins: [
       resolve(), // so Rollup can find `ms`
       commonjs(), // so Rollup can convert `ms` to an ES module
@@ -28,7 +28,7 @@ export default [
   // the `targets` option which can specify `dest` and `format`)
   {
     entry: "src/main.js",
-    external: ["request-promise"],
+    external: ["whatwg-fetch"],
     targets: [
       { dest: pkg.main, format: "cjs" },
       { dest: pkg.module, format: "es" }
